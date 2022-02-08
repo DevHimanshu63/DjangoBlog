@@ -4,22 +4,23 @@
 <div class="container">
 <form  method="post" action="/contact">
 <h1 class="my-3">Contact Us</h1>
+{% csrf_token %}
     <div class="mb-3 my-3">
         <label for="Name" class="form-label">Name</label>
-        <input type="Name" class="form-control" id="Name" aria-describedby="Name">
+        <input type="Name" name="name" class="form-control" id="Name" aria-describedby="Name">
       </div>
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
       
     </div>
     <div class="mb-3">
         <label for="phone" class="form-label">Phone Number</label>
-        <input type="phone" class="form-control" id="phone" aria-describedby="phone">
+        <input type="phone" name="phone" class="form-control" id="phone" aria-describedby="phone">
       </div>
       <div class="mb-3">
         <label for="content" class="form-label">Describe your issues:</label>
-       <textarea class=" form-control"name="content" id="content" cols="20" rows="5"></textarea>
+       <textarea class="form-control" name="content" id="content" cols="20" rows="5"></textarea>
       </div>
     <button type="submit" class="btn btn-success">Submit</button>
   </form>
